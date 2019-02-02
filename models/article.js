@@ -7,12 +7,12 @@ const articleSchema = new Schema({
     author: { type: String, required: true },
     main_picture: { type: String, required: true },
     article_body: { type: String, required: true },
-    additional_pics: { type: String, required: true },
-    video_link: { type: String, required: true },
-    podcast_link: { type: String, required: true },
-    song_link: { type: String, required: true },
+    additional_pics: { type: String },
+    video_link: { type: String },
+    podcast_link: { type: String },
+    song_link: { type: String },
     category: { type: String, required: true },
-    subcategory: { type: String, required: true },
+    subcategory: { type: String },
     date: { type: Date, default: Date.now }
 
 });
