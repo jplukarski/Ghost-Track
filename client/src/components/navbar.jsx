@@ -14,38 +14,40 @@ export default class Navbar extends Component {
         return (
             <>
                 <Menu inverted size='mini' borderless>
-                    <Menu.Item>
-                        <Button inverted color='blue' basic icon>
-                            <Icon
-                                circular
-                                name="facebook f"
-                            />
-                        </Button>
+                    <Menu.Item className="social-media-icons">
+                        <a href="https://www.facebook.com/GhostTrackMedia" target="_blank" rel='noopener noreferrer'>
+                            <Button inverted color='blue' basic icon>
+                                <Icon
+                                    size='tiny'
+                                    circular
+                                    name="facebook f"
+                                />
+                            </Button>
+                        </a>
                     </Menu.Item>
-                    <Menu.Item>
-                        <Button inverted color='purple' basic icon>
-                            <Icon
-                                circular
-                                name="instagram"
-                            />
-                        </Button>
+                    <Menu.Item className="social-media-icons">
+                        <a href="https://www.instagram.com/ghosttrackmedia/" target='blank' rel='noopener noreferrer'>
+                            <Button inverted color='purple' basic icon>
+                                <Icon
+                                    size='tiny'
+                                    circular
+                                    name="instagram"
+                                />
+                            </Button>
+                        </a>
                     </Menu.Item>
-                    <Menu.Item>
-                        <Button inverted color='teal' basic icon>
-                            <Icon
-                                circular
-                                name="twitter"
-                            />
-                        </Button>
+                    <Menu.Item className="social-media-icons">
+                        <a href='https://twitter.com/ghosttrackmedia' target='blank' rel='noopener noreferrer'>
+                            <Button inverted color='teal' basic icon>
+                                <Icon
+                                    size='tiny'
+                                    circular
+                                    name="twitter"
+                                />
+                            </Button>
+                        </a>
                     </Menu.Item>
-                    <Menu.Item>
-                        <Button inverted color='red' basic icon>
-                            <Icon
-                                circular
-                                name="google"
-                            />
-                        </Button>
-                    </Menu.Item>
+
                     <Menu.Menu position='right'>
                         <Menu.Item>
 
@@ -56,52 +58,49 @@ export default class Navbar extends Component {
                 <Menu inverted size='massive' stackable borderless>
                     <Container>
 
-                        <Menu.Item>
-                            <Link to={"/"}>
+                        <Link to={"/"}>
+                            <Menu.Item className="gt-home-button-navbar">
                                 <Image src="./assets/pics/logo.png" avatar></Image>
-                            </Link>
-                            <Link to={"/"}>
                                 <p>
                                     <h1>Ghost Track</h1>
                                 </p>
-                            </Link>
+                            </Menu.Item>
+                        </Link>
+                        <Link to={'/news'}>
+                            <Menu.Item
+                                name='News'
+                                active={activeItem === 'News'}
+                                onClick={this.handleItemClick}>
+                                News
                         </Menu.Item>
-                        <Menu.Item
-                            name='News'
-                            active={activeItem === 'News'}
-                            onClick={this.handleItemClick}>
-                            <Link
-                                to={'/news'}
-
-                            >News</Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='Reviews'
-                            active={activeItem === 'Reviews'}
-                            onClick={this.handleItemClick}
-                        >
-                            <Link to={'/reviews'}>
+                        </Link>
+                        <Link to={'/reviews'}>
+                            <Menu.Item
+                                name='Reviews'
+                                active={activeItem === 'Reviews'}
+                                onClick={this.handleItemClick}
+                            >
                                 Reviews
-                        </Link>
                         </Menu.Item>
-                        <Menu.Item
-                            name='Features'
-                            active={activeItem === 'Features'}
-                            onClick={this.handleItemClick}
-                        >
-                            <Link to={'/features'}>
+                        </Link>
+                        <Link to={'/features'}>
+                            <Menu.Item
+                                name='Features'
+                                active={activeItem === 'Features'}
+                                onClick={this.handleItemClick}
+                            >
                                 Features
+                        </Menu.Item>
                         </Link>
-                        </Menu.Item>
-                        <Menu.Item
-                            name='About'
-                            active={activeItem === 'About'}
-                            onClick={this.handleItemClick}
-                        >
-                            <Link to={"/about"}>
+                        <Link to={"/about"}>
+                            <Menu.Item
+                                name='About'
+                                active={activeItem === 'About'}
+                                onClick={this.handleItemClick}
+                            >
                                 About
-                            </Link>
                         </Menu.Item>
+                        </Link>
                     </Container>
                 </Menu>
             </>

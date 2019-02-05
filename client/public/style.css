@@ -26,4 +26,14 @@
 }
 /* -------------------------------------------------------- */
 
+/* Fix padding on items in Navbar */
+.social-media-icons {
+    padding: .5em !important;
+}
+
+.gt-home-button-navbar{
+    padding: .5em .5em 0em .5em !important;
+}
+/* ------------------------------ */
+
 /* ------------------------------------------ */
