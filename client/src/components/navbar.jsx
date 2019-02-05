@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Image, Icon, Container } from 'semantic-ui-react'
+import { Menu, Image, Icon, Container, Input } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
     state = { activeItem: 'home' }
@@ -40,6 +40,12 @@ export default class Navbar extends Component {
                             circular
                         />
                     </Menu.Item>
+                    <Menu.Menu position='right'>
+                        <Menu.Item>
+
+                            <Input size='large' icon='search' placeholder='Go on a Ghost Hunt...' inverted disabled />
+                        </Menu.Item>
+                    </Menu.Menu>
                 </Menu>
                 <Menu inverted size='massive' stackable borderless>
                     <Container>
