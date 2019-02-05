@@ -40,7 +40,11 @@ export default class Form extends React.Component {
             <Container >
                 <Segment raised padded='very'>
                     <Container textAlign='center'>
-                        This is my fucking form.
+                        <h1>
+
+                            This is my fucking form.
+                    </h1>
+                        <hr></hr>
                         <div>
                             Title:
                         <Input
