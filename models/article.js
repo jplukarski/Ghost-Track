@@ -16,7 +16,6 @@ const articleSchema = new Schema({
     date: { type: String, required: true },
     tags: { type: String, required: true }
 
-
 });
 
 const Article = mongoose.model("Article", articleSchema);

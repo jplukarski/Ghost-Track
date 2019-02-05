@@ -13,4 +13,17 @@
 }
 /* -------------------------- */
 
+/* Move the Ghost Icon in the Navbar slightly to the right */
+.ui.avatar.image{
+    margin-right : .75rem !important;
+}
+/* ------------------------------------------------------- */
+
+/* Round out the navbar buttons and make them a 'lil opaque */
+.ui.button{
+    border-radius: 2rem !important;
+    opacity: 25% !important;
+}
+/* -------------------------------------------------------- */
+
 /* ------------------------------------------ */

@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Navbar from "../../components/navbar";
+import Form from "../../components/Form/form"
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <Navbar />
-                Aye yo this my homepage
+                <Form />
             </div>
         );
     }

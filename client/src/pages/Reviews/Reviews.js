@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Navbar from "../../components/navbar";
 
-class Home extends Component {
+class Reviews extends Component {
     render() {
         return (
             <div>
                 <Navbar />
-                Aye yo this my homepage
+                Aye yo this my reviews page
             </div>
         );
     }
 }
 
-export default Home;
+export default Reviews;
