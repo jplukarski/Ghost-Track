@@ -13,7 +13,9 @@ const articleSchema = new Schema({
     song_link: { type: String },
     category: { type: String, required: true },
     subcategory: { type: String },
-    date: { type: Date, default: Date.now }
+    date: { type: String, required: true },
+    tags: { type: String, required: true }
+
 
 });
 
