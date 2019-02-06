@@ -11,6 +11,13 @@
 .ui.input>input {
     border-radius: 1rem !important;
 }
+
+textarea{
+    border-radius: 1rem !important;
+    width: 50% !important;
+    Height: 20rem !important;
+
+}
 /* -------------------------- */
 
 /* Move the Ghost Icon in the Navbar slightly to the right */

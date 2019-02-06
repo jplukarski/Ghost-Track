@@ -3,16 +3,15 @@ import { Input } from 'semantic-ui-react'
 
 class MainPic extends React.Component {
     state = {
-        srcs: [],
-        photos: []
+        mainsrcs: [],
     }
     previewFiles = () => {
-        let files = document.querySelector('input[type=file]').files;
+        let files = document.querySelector('.main_pic').files;
         if (files) {
             Promise.all([].map.call(files, this.readAndPreview))
-                .then(srcs => {
-                    this.props.getPhotos(srcs)
-                    this.setState({ srcs })
+                .then(mainsrcs => {
+                    this.props.getMainPhoto(mainsrcs)
+                    this.setState({ mainsrcs })
                 })
         }
     }
@@ -35,7 +34,7 @@ class MainPic extends React.Component {
         })
     }
     renderPicPreviews = () => {
-        return this.state.srcs.map((src, idx) => {
+        return this.state.mainsrcs.map((src, idx) => {
             return <img src={src} alt='Trip' style={{ maxHeight: 200, maxWidth: 200 }} key={idx} />
         })
     }
@@ -45,7 +44,7 @@ class MainPic extends React.Component {
                 <form>
                     <label className="label">Headline Photo: </label>
                     <Input>
-                        <input type='file' accept='image/*' multiple onChange={this.previewFiles} />
+                        <input className="main_pic" type='file' accept='image/*' multiple onChange={this.previewFiles} />
                     </Input>
                 </form>
                 {this.renderPicPreviews()}

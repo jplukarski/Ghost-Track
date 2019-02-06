@@ -4,10 +4,9 @@ import { Input } from 'semantic-ui-react'
 class PictureUploader extends React.Component {
     state = {
         srcs: [],
-        photos: []
     }
     previewFiles = () => {
-        let files = document.querySelector('input[type=file]').files;
+        let files = document.querySelector('.additional-pics').files;
         if (files) {
             Promise.all([].map.call(files, this.readAndPreview))
                 .then(srcs => {
@@ -45,7 +44,7 @@ class PictureUploader extends React.Component {
                 <form>
                     <label className="label">Additional Pictures for the article: </label>
                     <Input>
-                        <input type='file' accept='image/*' multiple onChange={this.previewFiles} />
+                        <input className="additional-pics" type='file' accept='image/*' multiple onChange={this.previewFiles} />
                     </Input>
                 </form>
                 {this.renderPicPreviews()}

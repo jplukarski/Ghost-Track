@@ -14,7 +14,14 @@ const articleSchema = new Schema({
     category: { type: String, required: true },
     subcategory: { type: String },
     date: { type: String, required: true },
-    tags: { type: String, required: true }
+    tags: { type: String, required: true },
+    artist: { type: String, required: true },
+    album: { type: String, required: true },
+    song: { type: String, required: true },
+    genre: { type: String, required: true },
+    city: { type: String, required: true },
+    release_date: { type: String, required: true },
+    our_take: { type: String, required: true },
 
 });
 

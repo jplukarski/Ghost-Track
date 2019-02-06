@@ -1,11 +1,11 @@
 import React from 'react'
-import { Segment, Container, Input } from 'semantic-ui-react'
+import { Segment, Container, Input, Form } from 'semantic-ui-react'
 import PictureUploader from './pictureuploader'
 import MainPic from './mainpic'
 
 
 
-export default class Form extends React.Component {
+export default class MyForm extends React.Component {
 
     state = {
         title: '',
@@ -59,8 +59,64 @@ export default class Form extends React.Component {
                                 onChange={this.handleInputChange}
                             />
                         </div>
-                        <MainPic getPhotos={this.getMainPhoto} />
+                        <MainPic getMainPhoto={this.getMainPhoto} />
+                        <div>
+                            Article Body:
+                        <Form.TextArea
+                                name="article_body"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
                         <PictureUploader getPhotos={this.getPhotos} />
+                        <div>
+                            Video Link:
+                        <Input
+                                name="video_link"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Podcast Link:
+                        <Input
+                                name="podcast_link"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Song Link:
+                        <Input
+                                name="song_link"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Category:
+                        <Input
+                                name="category"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Subcategory:
+                        <Input
+                                name="subcategory"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Date:
+                        <Input
+                                name="date"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+                        <div>
+                            Tags:
+                        <Input
+                                name="tags"
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
 
                     </Container>
                 </Segment>

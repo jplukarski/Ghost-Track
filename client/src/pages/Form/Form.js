@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Form from "../../components/Form/form"
+import MyForm from "../../components/Form/form"
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <Form />
+                <MyForm />
             </div>
         );
     }
