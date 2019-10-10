@@ -61,9 +61,9 @@ export default class Navbar extends Component {
                         <Link to={"/"}>
                             <Menu.Item className="gt-home-button-navbar">
                                 <Image src="./assets/pics/logo.png" avatar></Image>
-                                <p>
+                                <div>
                                     <h1>Ghost Track</h1>
-                                </p>
+                                </div>
                             </Menu.Item>
                         </Link>
                         <Link to={'/news'}>
@@ -72,7 +72,7 @@ export default class Navbar extends Component {
                                 active={activeItem === 'News'}
                                 onClick={this.handleItemClick}>
                                 News
-                        </Menu.Item>
+                            </Menu.Item>
                         </Link>
                         <Link to={'/reviews'}>
                             <Menu.Item
